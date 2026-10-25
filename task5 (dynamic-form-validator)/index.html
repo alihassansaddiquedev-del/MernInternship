@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f3">
+  <title>Taskwell — Task manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Taskwell home"><span class="brand-mark">✓</span><span>taskwell</span></a>
+      <div class="topbar-note"><span class="online-dot"></span> Your tasks stay on this device</div>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">A LITTLE MORE CLARITY</p>
+        <h1>Make room for<br><span>what matters.</span></h1>
+        <p class="intro-copy">Capture your next steps, then give them the space they need.</p>
+      </div>
+      <div class="date-card"><span class="date-icon">✳</span><span id="today-label">Today</span><strong id="task-count">0 tasks</strong></div>
+    </section>
+
+    <section class="workspace">
+      <section class="form-card" aria-labelledby="form-heading">
+        <div class="card-heading"><div><p class="eyebrow">YOUR NEXT STEP</p><h2 id="form-heading">Add a task</h2></div><span class="step-badge">01</span></div>
+        <form id="task-form" novalidate>
+          <input type="hidden" name="taskId" id="task-id">
+          <label for="task-title">Task name <span class="required">*</span></label>
+          <input id="task-title" name="title" type="text" required minlength="3" maxlength="80" pattern=".*\S.*" placeholder="e.g. Prepare the project outline" autocomplete="off" aria-describedby="title-error">
+          <small class="field-hint">Give it a clear, memorable name.</small>
+          <p id="title-error" class="field-error" aria-live="polite"></p>
+
+          <label for="task-email">Email for a reminder <span class="optional">Optional</span></label>
+          <input id="task-email" name="email" type="email" maxlength="120" placeholder="you@example.com" autocomplete="email" aria-describedby="email-error">
+          <p id="email-error" class="field-error" aria-live="polite"></p>
+
+          <div class="form-row">
+            <div class="field-group"><label for="task-due">Due date</label><input id="task-due" name="dueDate" type="date"></div>
+            <div class="field-group"><label for="task-priority">Priority</label><select id="task-priority" name="priority"><option value="gentle">Gentle</option><option value="steady" selected>Steady</option><option value="urgent">Urgent</option></select></div>
+          </div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <div class="form-actions"><button id="submit-button" class="button button-primary" type="submit"><span>＋</span> Add task</button><button id="cancel-edit" class="button button-quiet" type="button" hidden>Cancel</button></div>
+          <p class="privacy-note"><span>⌑</span> Your information is saved locally in this browser.</p>
+        </form>
+      </section>
+
+      <section class="list-card" aria-labelledby="list-heading">
+        <div class="list-heading"><div><p class="eyebrow">THE PLAN</p><h2 id="list-heading">Your tasks <span id="list-count" class="count-pill">0</span></h2></div><div class="filter-wrap"><label class="visually-hidden" for="task-filter">Filter tasks</label><select id="task-filter"><option value="all">All tasks</option><option value="open">To do</option><option value="done">Completed</option></select></div></div>
+        <div class="progress-track" aria-label="Task completion"><div id="progress-bar"></div></div>
+        <div id="task-list" class="task-list" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state"><span class="empty-illustration">✳</span><h3>A clear page.</h3><p>Add one small next step to get started.</p></div>
+        <footer class="list-footer"><span id="completion-label">A good plan starts small.</span><button id="clear-completed" type="button" class="text-button" hidden>Clear completed</button></footer>
+      </section>
+    </section>
+    <footer class="page-footer">A thoughtful little space for getting things done <span>✦</span></footer>
+  </main>
+
+  <dialog id="delete-dialog" class="confirm-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-symbol">!</div><p class="eyebrow">ONE LAST CHECK</p><h2 id="dialog-title">Delete this task?</h2><p id="dialog-copy">This task will be removed from your list.</p>
+    <div class="dialog-actions"><button id="keep-task" class="button button-quiet" type="button">Keep task</button><button id="confirm-delete" class="button button-danger" type="button">Delete task</button></div>
+  </dialog>
+  <script src="app.js" defer></script>
+</body>
+</html>
