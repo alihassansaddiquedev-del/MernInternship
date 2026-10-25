@@ -1,0 +1,17 @@
+{
+  "name": "task-tracker-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Immutable daily task tracker CLI for Node.js 24 LTS",
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "start": "node --experimental-strip-types index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
