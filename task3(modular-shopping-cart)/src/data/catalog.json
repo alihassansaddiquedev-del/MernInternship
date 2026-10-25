@@ -1,0 +1,8 @@
+[
+  { "id": "p100", "name": "Wireless Mouse", "category": "Accessories", "price": 2499, "stock": 20 },
+  { "id": "p101", "name": "Mechanical Keyboard", "category": "Accessories", "price": 8499, "stock": 12 },
+  { "id": "p102", "name": "USB-C Hub", "category": "Accessories", "price": 3999, "stock": 15 },
+  { "id": "p200", "name": "Laptop Stand", "category": "Workspace", "price": 3299, "stock": 8 },
+  { "id": "p201", "name": "Desk Lamp", "category": "Workspace", "price": 2199, "stock": 10 },
+  { "id": "p300", "name": "Water Bottle", "category": "Lifestyle", "price": 1299, "stock": 30 }
+]

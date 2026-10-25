@@ -1,0 +1,15 @@
+{
+  "name": "modular-shopping-cart",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A modular shopping cart demo using modern Node.js ES modules.",
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "tsc --project jsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.15.30"
+  }
+}
