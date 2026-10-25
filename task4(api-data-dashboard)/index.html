@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSONPlaceholder Data Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div><p class="eyebrow">LIVE API EXPLORER</p><h1>Community dashboard</h1><p class="subtitle">Users, posts, and comments from JSONPlaceholder.</p></div>
+      <button id="reload" class="button button-primary">Refresh data</button>
+    </header>
+    <section class="stats" id="stats" aria-live="polite"></section>
+    <section class="toolbar">
+      <label class="search-label" for="search">Search posts</label>
+      <input id="search" type="search" placeholder="Search titles and post text…" autocomplete="off">
+      <span id="search-status" class="muted">Type to filter</span>
+    </section>
+    <section class="content-grid">
+      <div class="panel posts-panel">
+        <div class="panel-heading"><div><p class="eyebrow">THE FEED</p><h2>Posts</h2></div><span id="post-count" class="pill">0 loaded</span></div>
+        <div id="posts" class="post-list"></div>
+        <div id="load-sentinel" class="load-sentinel">Scroll to load more</div>
+      </div>
+      <aside class="panel side-panel">
+        <div class="panel-heading"><div><p class="eyebrow">AT A GLANCE</p><h2>People</h2></div></div>
+        <div id="users" class="user-list"></div>
+        <div class="divider"></div>
+        <div class="panel-heading"><div><p class="eyebrow">RECENT DISCUSSION</p><h2>Comments</h2></div></div>
+        <div id="comments" class="comment-list"></div>
+      </aside>
+    </section>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <dialog id="detail-dialog"><button class="close" id="close-dialog" aria-label="Close">×</button><div id="detail-content"></div></dialog>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
