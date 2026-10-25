@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Prepare lecture notes",
+    "description": "Review tomorrow's computer science lecture",
+    "priority": "high",
+    "dueDate": "2026-10-21",
+    "status": "pending",
+    "createdAt": "2026-10-20T08:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Reply to emails",
+    "description": "Answer important college emails",
+    "priority": "medium",
+    "dueDate": "2026-10-20",
+    "status": "completed",
+    "createdAt": "2026-10-20T08:15:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Goto Gym",
+    "description": "",
+    "priority": "low",
+    "dueDate": "2023-05-23",
+    "status": "pending",
+    "createdAt": "2026-10-21T13:24:06.345Z"
+  },
+  {
+    "id": 4,
+    "title": "goto school",
+    "description": "",
+    "priority": "high",
+    "dueDate": "9998-45-55",
+    "status": "pending",
+    "createdAt": "2026-10-22T13:28:47.959Z"
+  }
+]
